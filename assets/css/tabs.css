@@ -1,0 +1,199 @@
+/*----------------------------*/
+/*  HT Tabs
+/*----------------------------*/
+  .ht-advance-tabs {
+    display: block;
+  }
+
+  .ht-advance-tabs .ht-tabs-nav > ul {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .ht-advance-tabs .ht-tabs-nav > ul li {
+    position: relative;
+    padding: 1em 1.5em;
+    flex: 1 1 auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .ht-advance-tabs .ht-tabs-nav > ul li:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    z-index: 1;
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #444;
+    border-bottom: 0px;
+    display: none;
+  }
+  
+  .ht-advance-tabs.active-caret-on .ht-tabs-nav > ul li.active:after,
+  .ht-advance-tabs.active-caret-on .ht-tabs-nav > ul li.active-default:after {
+    display: none;
+  }
+  
+  .ht-advance-tabs .ht-tabs-nav > ul li.active:after,
+  .ht-advance-tabs .ht-tabs-nav > ul li.active-default:after {
+    display: block;
+  }
+  
+  .ht-tabs-content {
+    display: flex;
+    flex: 1 1 auto;
+  }
+  
+  .ht-advance-tabs .ht-tabs-content > div {
+    display: none;
+    opacity: 0;
+  }
+  
+  .ht-advance-tabs .ht-tabs-content > div.active,
+  .ht-advance-tabs .ht-tabs-content > div.active-default {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    opacity: 1;
+    animation: fadeIn linear 0.3s;
+  }
+  
+  /*--- Inline Icon ---*/
+  .ht-tab-inline-icon li a .fa {
+    margin-right: 10px;
+    line-height: 1;
+  }
+  
+  .ht-tab-top-icon li a {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .ht-tab-top-icon li a .fa,
+  .ht-tab-top-icon li a .ht-tab-title {
+    flex: 1 1 100%;
+    line-height: 1;
+  }
+  
+  .ht-tab-top-icon li a .ht-tab-title {
+    margin-top: 10px;
+  }
+  
+  /*--- Left Vertical Tabs ---*/
+  .ht-advance-tabs.ht-tabs-left {
+    display: flex;
+  }
+  
+  .ht-advance-tabs.ht-tabs-left .ht-tabs-nav {
+    flex: 0 0 auto;
+  }
+  
+  .ht-advance-tabs.ht-tabs-left .ht-tabs-nav > ul {
+    flex-flow: column wrap;
+  }
+  
+  .ht-advance-tabs.ht-tabs-left .ht-tabs-nav > ul > li {
+    width: 100%;
+    justify-content: start;
+  }
+  
+  .ht-advance-tabs.ht-tabs-left .ht-tabs-nav > ul li::before {
+    bottom: auto !important;
+    right: -10px;
+    top: calc(50% - 10px);
+    left: auto !important;
+    border-left: 10px solid #444;
+    border-right: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+  /*--- Right Vertical Tabs ---*/
+ 
+  .ht-advance-tabs.ht-tabs-right {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .ht-advance-tabs.ht-tabs-right .ht-tabs-nav {
+    flex: 0 0 auto;
+  }
+  
+  .ht-advance-tabs.ht-tabs-right .ht-tabs-nav > ul {
+    flex-flow: column wrap;
+  }
+  
+  .ht-advance-tabs.ht-tabs-right .ht-tabs-nav > ul > li {
+    width: 100%;
+    justify-content: start;
+  }
+  
+  .ht-advance-tabs.ht-tabs-right .ht-tabs-nav > ul li::before {
+    bottom: auto !important;
+    right: -10px;
+    top: calc(50% - 10px);
+    left: auto !important;
+    border-left: 10px solid #444;
+    border-right: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+   /*--- Bottom Tabs ---*/
+  .ht-tabs-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .ht-advance-tabs .ht-tabs-nav > ul {
+      flex-wrap: wrap;
+    }
+  
+    .ht-advance-tabs .ht-tabs-nav > ul li {
+      flex: 1 100%;
+    }
+  
+    .ht-advance-tabs.ht-tabs-vertical {
+      flex-wrap: wrap;
+    }
+  
+    .ht-advance-tabs.ht-tabs-vertical div.ht-tabs-nav {
+      flex: 1 100%;
+    }
+  
+    .ht-advance-tabs.ht-tabs-vertical ul {
+      flex: 1 100%;
+    }
+  
+    .ht-advance-tabs.ht-tabs-vertical ul li {
+      flex: 1 100%;
+    }
+  
+    div.ht-advance-tabs.ht-tabs-vertical div.ht-tabs-nav > ul li::after {
+      border-left-color: transparent !important;
+      bottom: -20px !important;
+      left: 0 !important;
+      right: 0 !important;
+      top: auto !important;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top-color: #444 !important;
+    }
+  }
+  

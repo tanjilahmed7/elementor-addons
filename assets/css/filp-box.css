@@ -1,0 +1,299 @@
+/*---------------------------*/
+/* 18. Flipbox Style
+/*---------------------------*/
+.ht-flip-box-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+  }
+  
+  .ht-flip-box-container .flipbox-button {
+    display: inline-block;
+    -webkit-transition: all 400ms;
+    -o-transition: all 400ms;
+    transition: all 400ms;
+  }
+  
+  .ht-flip-box-container a {
+    display: block;
+  }
+  
+  .ht-flip-box-vertical-align {
+    width: 100%;
+  }
+  
+  .ht-flip-box-padding {
+    padding: 0px 30px 5px 30px;
+  }
+  
+  .ht-flip-box-icon-image {
+    display: inline-block;
+    margin: 0 auto 0px auto;
+    line-height: 1;
+  }
+  
+  .ht-flip-box-icon-image.ht_eleements_flip_front_icon_style_background {
+    background: #cccccc;
+  }
+  
+  .ht_eleements_flip_front_icon_style_bordered {
+    border: 2px solid #ffffff;
+  }
+  
+  .ht_flip_box_icon_border_round {
+    border-radius: 100px;
+  }
+  
+  .ht_eleements_flip_front_icon_style_background,
+  .ht_eleements_flip_front_icon_style_bordered {
+    padding: 15px;
+  }
+  
+  .ht-flip-box-icon-image i {
+    font-size: 40px;
+    line-height: 40px;
+    width: 40px;
+  }
+  
+  .ht-slider-display-table {
+    width: 100%;
+  }
+  
+  .ht-flip-box-front-container {
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: #0e9dd2;
+    color: #ffffff;
+    border-color: #000000;
+    -webkit-display: flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .ht-flip-box-content,
+  .ht-flip-box-heading {
+    color: #ffffff;
+  }
+  
+  .ht-flip-box-heading.flipbox-linked-title {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+  
+  .ht-flip-box-rear-container {
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #444444;
+    color: #ffffff;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    border-color: #000000;
+  }
+  
+  /*--- Floating Button Styles ---*/
+  .ht-button-floating-container {
+    position: fixed;
+    z-index: 100;
+  }
+  
+  .ht-button-floating-container .ht-button {
+    margin-top: 0px;
+    font-size: 14px;
+    position: relative;
+    padding: 14px 20px;
+  }
+  
+  .ht-button {
+    cursor: pointer;
+    display: inline-block;
+    background: #077bbe;
+    color: #ffffff;
+    line-height: 1;
+    padding: 16px 25px;
+    margin-top: 15px;
+  }
+  
+  .ht-button:hover {
+    background: #077bbe;
+    color: #ffffff;
+  }
+  
+  /*--- CSS3 Transitions ---*/
+  .ht-flip-box-container {
+    perspective: 1000px;
+  }
+  
+  .ht-flip-box-front-container,
+  .ht-flip-box-rear-container {
+    transition-duration: 500ms;
+    transition-property: all;
+    transition-timing-function: ease;
+  }
+  
+  .ht-flip-box-flip-card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 500ms ease;
+  }
+  
+  .ht-flip-box-rear-container,
+  .ht-flip-box-front-container {
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    transform: rotateY(0deg);
+  }
+  
+  /*--- Flip ---*/
+  .ht-animate-flip.ht-animate-up.ht-flip-box-container:hover .ht-flip-box-flip-card,
+  .ht-animate-flip.ht-animate-up .ht-flip-box-rear-container {
+    transform: rotateX(180deg);
+  }
+  
+  .ht-animate-flip.ht-animate-down.ht-flip-box-container:hover .ht-flip-box-flip-card,
+  .ht-animate-flip.ht-animate-down .ht-flip-box-rear-container {
+    transform: rotateX(-180deg);
+  }
+  
+  .ht-animate-flip.ht-animate-left.ht-flip-box-container:hover .ht-flip-box-flip-card,
+  .ht-animate-flip.ht-animate-left .ht-flip-box-rear-container {
+    transform: rotateY(-180deg);
+  }
+  
+  .ht-animate-flip.ht-animate-right.ht-flip-box-container:hover .ht-flip-box-flip-card,
+  .ht-animate-flip.ht-animate-right .ht-flip-box-rear-container {
+    transform: rotateY(180deg);
+  }
+  
+  /*--- Slide ---*/
+  .ht-animate-push.ht-flip-box-container,
+  .ht-animate-slide.ht-flip-box-container {
+    overflow: hidden;
+  }
+  
+  .ht-animate-push .ht-flip-box-rear-container,
+  .ht-animate-slide .ht-flip-box-rear-container {
+    z-index: 3;
+  }
+  
+  .ht-animate-push.ht-animate-up .ht-flip-box-rear-container,
+  .ht-animate-slide.ht-animate-up .ht-flip-box-rear-container {
+    top: 100%;
+  }
+  
+  .ht-animate-push.ht-animate-up.ht-flip-box-container:hover .ht-flip-box-rear-container,
+  .ht-animate-slide.ht-animate-up.ht-flip-box-container:hover .ht-flip-box-rear-container {
+    top: 0;
+  }
+  
+  .ht-animate-push.ht-animate-down .ht-flip-box-rear-container,
+  .ht-animate-slide.ht-animate-down .ht-flip-box-rear-container {
+    top: auto;
+    bottom: 100%;
+  }
+  
+  .ht-animate-push.ht-animate-down.ht-flip-box-container:hover .ht-flip-box-rear-container,
+  .ht-animate-slide.ht-animate-down.ht-flip-box-container:hover .ht-flip-box-rear-container {
+    top: auto;
+    bottom: 0;
+  }
+  
+  .ht-animate-push.ht-animate-left .ht-flip-box-rear-container,
+  .ht-animate-slide.ht-animate-left .ht-flip-box-rear-container {
+    left: 100%;
+  }
+  
+  .ht-animate-push.ht-animate-left.ht-flip-box-container:hover .ht-flip-box-rear-container,
+  .ht-animate-slide.ht-animate-left.ht-flip-box-container:hover .ht-flip-box-rear-container {
+    left: 0;
+  }
+  
+  .ht-animate-push.ht-animate-right .ht-flip-box-rear-container,
+  .ht-animate-slide.ht-animate-right .ht-flip-box-rear-container {
+    left: auto;
+    right: 100%;
+  }
+  
+  .ht-animate-push.ht-animate-right.ht-flip-box-container:hover .ht-flip-box-rear-container,
+  .ht-animate-slide.ht-animate-right.ht-flip-box-container:hover .ht-flip-box-rear-container {
+    left: auto;
+    right: 0;
+  }
+  
+  /*--- Push + Slide Above ---*/
+  .ht-animate-push.ht-animate-up.ht-flip-box-container:hover .ht-flip-box-front-container {
+    top: -100%;
+  }
+  
+  .ht-animate-push.ht-animate-down.ht-flip-box-container:hover .ht-flip-box-front-container {
+    top: 100%;
+  }
+  
+  .ht-animate-push.ht-animate-left.ht-flip-box-container:hover .ht-flip-box-front-container {
+    left: -100%;
+  }
+  
+  .ht-animate-push.ht-animate-right.ht-flip-box-container:hover .ht-flip-box-front-container {
+    left: 100%;
+  }
+  
+  /*--- Zoom In ---*/
+  .ht-animate-zoom-in .ht-flip-box-rear-container {
+    opacity: 0;
+    transform: scale(0.75);
+    z-index: 3;
+  }
+  
+  .ht-animate-zoom-in.ht-flip-box-container:hover .ht-flip-box-rear-container {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /*--- Zoom Out ---*/
+  .ht-animate-zoom-out.ht-flip-box-container:hover .ht-flip-box-front-container {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+  
+  .ht-animate-fade.ht-flip-box-container:hover .ht-flip-box-front-container {
+    opacity: 0;
+  }
+  
+  /*--- Builder Related Style ---*/
+  .ht-flipbox-content-align-right .ht-flip-box-padding {
+    text-align: right;
+  }
+  
+  .ht-flipbox-content-align-left .ht-flip-box-padding {
+    text-align: left;
+  }
+  
+  .ht-flipbox-content-align-center .ht-flip-box-padding {
+    text-align: center;
+  }
+  
+  .ht-flipbox-img-circle .ht-flip-box-icon-image img,
+  .ht-flipbox-img-circle .flipbox-back-image-icon img {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .ht-flip-box-front-container.front-end-border,.ht-flip-box-rear-container.back-end-border {
+    background: none;
+  }
+  
+ 

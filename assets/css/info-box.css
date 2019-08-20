@@ -1,0 +1,200 @@
+/* ------------------------ */
+/* 17. Infobox Style
+/* ------------------------ */
+/*--- Image/Icon On Top ---*/
+.ht-infobox .infobox-icon {
+    height: auto;
+  }
+  
+  .ht-infobox .infobox-icon .infobox-icon-wrap {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .3s;
+  }
+  
+  .ht-infobox .infobox-icon .infobox-icon-wrap i {
+    transition: .3s;
+  }
+  
+  /*--- For Content Alignment ---*/
+  .ht-infobox-content-align-left .ht-infobox .infobox-icon,
+  .ht-infobox-content-align-left .ht-infobox .infobox-content,
+  .ht-infobox-content-align-left .ht-infobox .infobox-button {
+    text-align: left;
+  }
+  
+  .ht-infobox-content-align-right .ht-infobox .infobox-icon,
+  .ht-infobox-content-align-right .ht-infobox .infobox-content,
+  .ht-infobox-content-align-right .ht-infobox .infobox-button {
+    text-align: right;
+  }
+  
+  .ht-infobox-content-align-center .ht-infobox .infobox-icon,
+  .ht-infobox-content-align-center .ht-infobox .infobox-content,
+  .ht-infobox-content-align-center .ht-infobox .infobox-button {
+    text-align: center;
+  }
+  
+  /*--- For icon background shape ---*/
+  .ht-infobox-icon-bg-shape-square .infobox-icon .infobox-icon-wrap,
+  .ht-infobox-icon-bg-shape-radius .infobox-icon .infobox-icon-wrap,
+  .ht-infobox-icon-bg-shape-circle .infobox-icon .infobox-icon-wrap {
+    width: 90px;
+    height: 90px;
+    text-align: center;
+  }
+  
+  .ht-infobox-icon-hover-bg-shape-square:hover .infobox-icon .infobox-icon-wrap {
+    border-radius: 0;
+  }
+  
+  .ht-infobox-icon-bg-shape-radius .infobox-icon .infobox-icon-wrap,
+  .ht-infobox-icon-hover-bg-shape-radius:hover .infobox-icon .infobox-icon-wrap {
+    border-radius: 15px;
+  }
+  
+  .ht-infobox-icon-bg-shape-radius .infobox-icon .infobox-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ht-infobox-icon-bg-shape-circle .infobox-icon .infobox-icon-wrap,
+  .ht-infobox-icon-hover-bg-shape-circle:hover .infobox-icon .infobox-icon-wrap {
+    border-radius: 50%;
+  }
+  
+  .ht-infobox-icon-bg-shape-square .infobox-icon .infobox-icon-wrap i,
+  .ht-infobox-icon-bg-shape-circle .infobox-icon .infobox-icon-wrap i {
+    margin-top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /*--- Infobox Button ---*/
+  .ht-infobox .infobox-button a.ht-infobox-button {
+    display: inline-block;
+    padding: 5px 10px;
+    -webkit-transition: all 300ms ease-in-out 0s;
+    -o-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s;
+  }
+  
+  /*--- For icon bg shape alignment ---*/
+  .ht-infobox-content-align-left.ht-infobox-icon-bg-shape-square .infobox-icon,
+  .ht-infobox-content-align-left.ht-infobox-icon-bg-shape-radius .infobox-icon,
+  .ht-infobox-content-align-left.ht-infobox-icon-bg-shape-circle .infobox-icon {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .ht-infobox-content-align-center.ht-infobox-icon-bg-shape-square .infobox-icon,
+  .ht-infobox-content-align-center.ht-infobox-icon-bg-shape-radius .infobox-icon,
+  .ht-infobox-content-align-center.ht-infobox-icon-bg-shape-circle .infobox-icon {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ht-infobox-content-align-right.ht-infobox-icon-bg-shape-square .infobox-icon,
+  .ht-infobox-content-align-right.ht-infobox-icon-bg-shape-radius .infobox-icon,
+  .ht-infobox-content-align-right.ht-infobox-icon-bg-shape-circle .infobox-icon {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /*--- Image/Icon On Left ---*/
+  .ht-infobox.icon-on-left {
+    position: relative;
+    z-index: 0;
+    display: flex;
+  }
+  
+  .ht-infobox.icon-on-right .infobox-icon-wrap,
+  .ht-infobox.icon-on-left .infobox-icon-wrap {
+    justify-content: center;
+    display: flex !important;
+    align-items: center;
+  }
+  
+  .ht-infobox.icon-on-left .infobox-icon .infobox-icon-wrap {
+    background: none;
+    border: 0px;
+    text-align: left;
+    height: auto;
+    display: block;
+  }
+  
+  .ht-infobox .infobox-content p {
+    margin: 0 0 15px;
+  }
+  
+  .ht-infobox.icon-on-left .infobox-icon .infobox-icon-wrap i {
+    margin-top: 0px;
+    transform: translateY(0%);
+  }
+  
+  .ht-infobox.icon-on-left .infobox-content {
+    padding-left: 15px;
+    flex: 1 1 auto;
+  }
+  
+  .ht-infobox.icon-on-left .infobox-content .title {
+    line-height: 1;
+    margin: 0 0 10px 0;
+  }
+  
+  /*--- Image/Icon On Right ---*/
+  .ht-infobox.icon-on-right {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .ht-infobox.icon-on-right .infobox-icon .infobox-icon-wrap {
+    background: none;
+    border: 0px;
+    text-align: right;
+    width: auto;
+    height: auto;
+    display: block;
+  }
+  
+  .ht-infobox.icon-on-right .infobox-icon .infobox-icon-wrap i {
+    margin-top: 0px;
+    transform: translateY(0%);
+  }
+  
+  .ht-infobox.icon-on-right .infobox-content {
+    padding-right: 15px;
+    text-align: right;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+  }
+  
+  .ht-infobox.icon-on-right .infobox-content .title {
+    line-height: 1;
+    margin: 0 0 10px 0;
+  }
+  
+  /*--- Imgae Circle On Top ---*/
+  .ht-infobox .infobox-icon img {
+    -webkit-transition: all 300ms ease-in-out 0s;
+    -o-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s;
+  }
+  
+  .ht-infobox-hover-img-shape-square:hover .ht-infobox .infobox-icon img {
+    border-radius: 0;
+  }
+  
+  .ht-infobox-shape-circle .ht-infobox .infobox-icon img,
+  .ht-infobox-hover-img-shape-circle:hover .ht-infobox .infobox-icon img {
+    border-radius: 50%;
+  }
+  
+  .ht-infobox-shape-radius .ht-infobox .infobox-icon img,
+  .ht-infobox-hover-img-shape-radius:hover .ht-infobox .infobox-icon img {
+    border-radius: 15px;
+  }
+  

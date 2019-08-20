@@ -1,0 +1,53 @@
+.progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1.5rem;
+  font-size: .75rem;
+  background-color: #e9ecef;
+  border-radius: .25rem;
+  margin-top: 50px;
+  
+}
+.progress-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  background-color: #007bff;
+  transition: width .6s ease;
+  box-sizing: initial;
+
+} 
+     
+.progress-bar span {
+  font-size: 15px;
+  transform: translateY(-34px);
+  color: #000;
+  
+  
+}
+
+
+div#progress-1 {
+  background-color: #333;
+}
+div#progress-2 {
+  background-color: red;
+}
+
+
+.single.progress {
+  margin: 0;
+}
+
+/* Pie */
+

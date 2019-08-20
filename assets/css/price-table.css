@@ -1,0 +1,274 @@
+/* 
+==================================================================
+|Price Table CSS 
+==================================================================
+*/
+.ht-price-table {
+    border: 1px solid #e0e0e0; 
+    position: relative;
+}
+.ht-price-table *:not(i.fa) {
+    font-family: 'Roboto Slab', serif;
+    color: #4c4c4c;
+}
+.ht-price-table .price-table-header .title {
+    margin: 0px;
+    padding: 0px;
+}
+.ht-price-table .price-table-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.ht-price-table .price-table-price {
+    min-height: 200px; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: row wrap;
+                    flex-flow: row wrap;
+
+    background: -webkit-linear-gradient(135deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+
+    background: -o-linear-gradient(135deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+    position: relative; 
+    overflow: hidden;  
+}
+/*
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+*/
+.ht-price-table .price-table-price::after, .ht-price-table .price-table-price::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 100%;
+    bottom: -50%; 
+}
+.ht-price-table .price-table-price::before {
+    background: transparent;
+    border: 2px solid #fff;
+    bottom: calc(-50% - 5px );
+    width: 210px;
+    height: 210px;
+}
+.ht-price-table .price-table-price .price-inner {
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.ht-price-table .price-table-price .currency-symbol {
+    z-index: 1;
+    margin-right: 5px;
+    font-size: 22px;
+    line-height: 35px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+}
+.ht-price-table .price-table-price .price-value {
+    z-index: 1;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 900;
+}
+.ht-price-table .price-table-price .price-period {
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    z-index: 1; 
+    bottom: 8px;
+    font-size: 14px;
+    display: block;
+}
+.ht-price-table .price-table-features-list {
+    list-style: none;
+    text-align: center;
+}
+.ht-price-table .price-table-features-list li {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 12px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+}
+.ht-price-table .price-table-features-list li:not(:first-child):before {
+    content: "";
+    display: block;
+    border: 0 solid hsla(0,0%,48%,.3); 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ht-price-table .price-table-features-list li img.icon-img {
+    width: 15px;
+    margin-right: 6px;
+}
+.ht-price-table .price-table-features-list li i.fa {
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    margin-right: 6px;
+    color: inherit;
+}
+.ht-price-table .price-table-footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.ht-price-table .price-table-footer .price-button {
+    padding: 12px 30px;
+    display: inline-block;
+    background-color: #428bca;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 3px;
+}
+.ht-price-table .price-table-ribbon {
+    width: 100px;
+    overflow: hidden;
+    height: 100px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.ht-price-table .price-table-ribbon  span.riboon-text{
+    position: absolute;
+    transform: rotate(50deg);
+    background: #61ce70;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    width: 150px;
+    text-align: center;
+    top: 30px;
+    right: -40px;
+    letter-spacing: 2px;
+}
+.ht-price-table .price-table-thumb {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.ht-price-table .price-table-thumb img {
+    max-width: 40%;
+}
+.ht-price-table.effect-two .price-table-header .title {
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.ht-price-table.effect-two .price-table-price {
+    min-height: auto;
+    background: transparent;
+}
+.ht-price-table.effect-two .price-table-footer .price-button {
+    background: transparent;
+    color: #4c4c4c; 
+    border-radius: 0px;
+    padding: 10px 30px;
+    border: 1px solid #4c4c4c;
+}
+
+.ht-price-table.effect-two .price-table-price .currency-symbol { 
+    -ms-flex-item-align: start; 
+        align-self: flex-start;
+}
+.elementor-widget-ht-price-table .ht-price-table.effect-three .price-table-header {
+    background: #54595f;
+}
+.ht-price-table.effect-three .price-table-header * {
+    color: #fff;
+}
+.ht-price-table.effect-three .price-table-price {
+    background: no-repeat;
+    min-height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.elementor-widget-ht-price-table .ht-price-table .price-table-header {
+    background: inherit;
+}
+.ht-price-table.effect-three .price-table-price::before,
+.ht-price-table.effect-three .price-table-price::after, 
+.ht-price-table.effect-two .price-table-price::before,
+.ht-price-table.effect-two .price-table-price::after {
+    display: none;
+}

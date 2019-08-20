@@ -1,0 +1,59 @@
+/*---------------------------------*/
+/* 05. Countdown Styles
+/*---------------------------------*/
+/*--- General ---*/
+.ht-countdown-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+  
+  .ht-countdown-items > li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: table-cell;
+    position: relative;
+  }
+  
+  .ht-countdown-item > div {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .ht-countdown-label-block .ht-countdown-digits,
+  .ht-countdown-label-block .ht-countdown-label {
+    display: block;
+    text-align: center;
+  }
+  
+  .ht-countdown-digits {
+    font-size: 54px;
+    line-height: 1;
+  }
+  
+  .ht-countdown-label {
+    font-size: 18px;
+    line-height: 1;
+    color: #ffffff;
+  }
+  
+  .ht-countdown-show-separator .ht-countdown-digits::after {
+    content: ":";
+    position: absolute;
+    left: 98%;
+    z-index: 9999;
+  }
+  
+  .ht-countdown-item:last-child .ht-countdown-digits::after {
+    display: none;
+  }
+  
+  /*--- Style 1 ---*/
+  .ht-countdown-items.style-1 .ht-countdown-item > div {
+    background: #262625;
+  }
+  
